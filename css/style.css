@@ -228,13 +228,14 @@ footer {
 }
 
 .card-nome {
-    font-weight: 600;
-    font-size: 0.8rem;
+    font-weight: 700;        /* negrito forte */
+    font-size: 0.95rem;
     margin: 6px 0;
 }
 
 .card-fator {
-    font-size: 0.7rem;
+    font-weight: 700;    /* negrito também no valor */
+    font-size: 0.85rem;
     color: #8b5a3c;
 }
 
@@ -265,12 +266,13 @@ footer {
 }
 
 .comparacao-nome {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.85rem;
     margin: 6px 0;
 }
 
 .comparacao-valor {
+    font-weight: 700;
     font-size: 1rem;
     color: #8b5a3c;
 }
