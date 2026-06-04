@@ -11,6 +11,7 @@
   <img src="https://img.shields.io/static/v1?label=HTML5&message=5&color=E34F26&labelColor=202024" alt="HTML5" />
   <img src="https://img.shields.io/static/v1?label=CSS3&message=3&color=1572B6&labelColor=202024" alt="CSS3" />
   <img src="https://img.shields.io/static/v1?label=JavaScript&message=ES6&color=F7DF1E&labelColor=202024" alt="JavaScript" />
+  <img src="https://img.shields.io/static/v1?label=GitHub+Pages&message=online&color=6b442b&labelColor=202024" alt="GitHub Pages" />
 </p>
 
 ## 👩‍💻 Expert
@@ -25,8 +26,8 @@
     </td>
     <td>
       <p>🎯 Analista de QA Júnior<br/>
-      🌟 Criadora do projeto Agente Trello<br/>
-      👩‍💻 Habilidades: Python, APIs, Automação, Git, GitHub
+      🌟 Criadora da Calculadora EcoTrip<br/>
+      👩‍💻 Habilidades: HTML, CSS, JavaScript, Lógica de Programação, Sustentabilidade
       </p>
       <a href="https://www.linkedin.com/in/flaviapaiva234/">
         <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
@@ -37,6 +38,12 @@
     </td>
   </tr>
 </table>
+
+## 🌐 Projeto Online
+
+Acesse a **Calculadora EcoTrip** diretamente no navegador:
+
+👉 [https://flaviapaiva234.github.io/calculadora-ecotrip/](https://flaviapaiva234.github.io/calculadora-ecotrip/)
 
 ## 💻 Sobre o Projeto
 
