@@ -1,0 +1,151 @@
+/* Reset básico e configuração global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #e8ddd3 0%, #d6c8bc 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    background: #fef9f0;
+    border-radius: 32px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+header {
+    background: #5e3a2b;
+    color: #fef3e2;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+header p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-top: 8px;
+}
+
+main {
+    padding: 30px 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #4a2c1a;
+    font-size: 0.9rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d4b694;
+    border-radius: 16px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: 0.2s;
+    background-color: #fffaf5;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #8b5a3c;
+    box-shadow: 0 0 0 3px rgba(139, 90, 60, 0.2);
+}
+
+button {
+    width: 100%;
+    background-color: #8b5a3c;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+    font-family: inherit;
+}
+
+button:hover {
+    background-color: #6b442b;
+}
+
+.resultado {
+    margin-top: 30px;
+    background: #f5ede4;
+    border-radius: 24px;
+    padding: 20px;
+    text-align: center;
+    border-left: 6px solid #8b5a3c;
+}
+
+.resultado h3 {
+    font-size: 1.3rem;
+    color: #4a2c1a;
+    margin-bottom: 15px;
+}
+
+#emissao {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #8b5a3c;
+    margin: 15px 0;
+}
+
+#dica {
+    font-size: 0.9rem;
+    color: #6b442b;
+    background: #e7d9cd;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 40px;
+    margin-top: 10px;
+}
+
+footer {
+    background: #f7efe8;
+    text-align: center;
+    padding: 16px;
+    font-size: 0.8rem;
+    color: #6b4c3a;
+    border-top: 1px solid #e6d5c4;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    main {
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 1.6rem;
+    }
+    #emissao {
+        font-size: 1.6rem;
+    }
+}
