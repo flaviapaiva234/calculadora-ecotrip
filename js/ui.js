@@ -34,7 +34,7 @@ function exibirResultadoDetalhado(emissao, distancia, origem, destino, transport
     const resultadoDiv = document.getElementById('resultado');
     if (!resultadoDiv) return;
     resultadoDiv.style.display = 'block';
-    
+
     const rotaSpan = document.getElementById('rota-info');
     if (rotaSpan) {
         if (origem && destino && origem.trim() && destino.trim()) {
@@ -45,10 +45,10 @@ function exibirResultadoDetalhado(emissao, distancia, origem, destino, transport
     }
     const distanciaSpan = document.getElementById('distancia-info');
     if (distanciaSpan) distanciaSpan.textContent = `${distancia} km`;
-    
+
     const emissaoEl = document.getElementById('emissao');
     if (emissaoEl) emissaoEl.textContent = `${emissao} kg CO₂`;
-    
+
     const dicaEl = document.getElementById('dica');
     if (dicaEl) dicaEl.textContent = gerarDica(emissao);
 }
@@ -57,18 +57,22 @@ function exibirResultadoDetalhado(emissao, distancia, origem, destino, transport
 function atualizarComparacao(distanciaKm, transporteSelecionadoId) {
     const container = document.getElementById('comparacao-tabela');
     if (!container) return;
-    
+
     const emissaoSelecionada = getEmissaoPorTransporte(distanciaKm, transporteSelecionadoId);
     let html = '<div class="comparacao-grid">';
     transportes.forEach(transp => {
         const emissao = getEmissaoPorTransporte(distanciaKm, transp.id);
-        let percentual = 0;
+
+        let percentual;
         if (emissaoSelecionada > 0) {
             percentual = (emissao / emissaoSelecionada) * 100;
         } else if (emissaoSelecionada === 0 && emissao > 0) {
-            percentual = 999; // infinito, mas trata
+            percentual = Infinity;   // em vez de 999
+        } else {
+            percentual = 0;          // ambos zero
         }
-        const percentualFormatado = (percentual > 999) ? '∞' : percentual.toFixed(1);
+        const percentualFormatado = isFinite(percentual) ? percentual.toFixed(1) : '∞';
+
         const destaque = (transp.id === transporteSelecionadoId) ? 'destaque' : '';
         html += `
             <div class="comparacao-card ${destaque}">

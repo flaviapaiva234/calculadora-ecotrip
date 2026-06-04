@@ -74,7 +74,7 @@ header p {
     transition: background-color 0.2s, transform 0.1s;
     color: white;
     position: absolute;
-    top: 20px;
+    bottom: 20px;
     right: 20px;
 }
 
@@ -114,7 +114,8 @@ label {
     font-size: 0.9rem;
 }
 
-input, select {
+input,
+select {
     width: 100%;
     padding: 12px 15px;
     border: 1px solid #d4b694;
@@ -125,7 +126,8 @@ input, select {
     background-color: #fffaf5;
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
     outline: none;
     border-color: #8b5a3c;
     box-shadow: 0 0 0 3px rgba(139, 90, 60, 0.2);
@@ -228,13 +230,15 @@ footer {
 }
 
 .card-nome {
-    font-weight: 700;        /* negrito forte */
+    font-weight: 700;
+    /* negrito forte */
     font-size: 0.95rem;
     margin: 6px 0;
 }
 
 .card-fator {
-    font-weight: 700;    /* negrito também no valor */
+    font-weight: 700;
+    /* negrito também no valor */
     font-size: 0.85rem;
     color: #8b5a3c;
 }
@@ -350,9 +354,11 @@ body.dark-theme #dica {
     main {
         padding: 20px;
     }
+
     header h1 {
         font-size: 1.6rem;
     }
+
     #emissao {
         font-size: 1.6rem;
     }

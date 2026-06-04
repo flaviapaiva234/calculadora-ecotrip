@@ -55,7 +55,7 @@ O projeto foi desenvolvido como parte do Bootcamp **"Do Prompt ao Agente"** da D
 
 - ✅ Campo opcional de **origem e destino** (reservado para integração futura com API de distâncias)
 - ✅ Campo obrigatório de **distância** (km) com entrada manual
-- ✅ **Seleção de meio de transporte** (carro, ônibus, avião, trem, metrô, bicicleta, caminhada)
+- ✅ **Seleção de meio de transporte** (carro (gasolina), carro (etanol), motocicleta, ônibus, avião, trem, metrô, navio/balsa, caminhão, bicicleta, caminhada)
 - ✅ **Cálculo automático** da emissão de CO₂ com base em fatores de emissão pré‑definidos
 - ✅ **Exibição de dicas ecológicas** conforme o nível de emissão (baixo, moderado, alto)
 - ✅ **Layout responsivo** e visual personalizado com paleta de cores marrom/terrosa
