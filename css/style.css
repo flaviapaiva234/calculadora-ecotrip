@@ -60,7 +60,8 @@ label {
     font-size: 0.9rem;
 }
 
-input, select {
+input,
+select {
     width: 100%;
     padding: 12px 15px;
     border: 1px solid #d4b694;
@@ -71,7 +72,8 @@ input, select {
     background-color: #fffaf5;
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
     outline: none;
     border-color: #8b5a3c;
     box-shadow: 0 0 0 3px rgba(139, 90, 60, 0.2);
@@ -142,9 +144,11 @@ footer {
     main {
         padding: 20px;
     }
+
     header h1 {
         font-size: 1.6rem;
     }
+
     #emissao {
         font-size: 1.6rem;
     }
@@ -173,7 +177,7 @@ footer {
     border-color: #5e3a2b;
     color: white;
     transform: scale(1.02);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .transport-card.active .card-fator {
@@ -253,4 +257,158 @@ footer {
 .comparacao-valor {
     font-size: 1rem;
     color: #8b5a3c;
+}
+
+/* Variáveis de tema (claro é o padrão) */
+:root {
+    --bg-gradient-start: #e8ddd3;
+    --bg-gradient-end: #d6c8bc;
+    --container-bg: #fef9f0;
+    --header-bg: #5e3a2b;
+    --header-text: #fef3e2;
+    --label-color: #4a2c1a;
+    --input-bg: #fffaf5;
+    --input-border: #d4b694;
+    --input-focus: #8b5a3c;
+    --button-bg: #8b5a3c;
+    --button-hover: #6b442b;
+    --result-bg: #f5ede4;
+    --result-border: #8b5a3c;
+    --card-bg: #fef7f0;
+    --card-border: #e6d5c4;
+    --card-active-bg: #8b5a3c;
+    --card-active-text: white;
+    --comparison-card-bg: white;
+    --footer-bg: #f7efe8;
+    --footer-text: #6b4c3a;
+    --text-color: #1e1e1e;
+}
+
+body {
+    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+    color: var(--text-color);
+}
+
+.container {
+    background: var(--container-bg);
+}
+
+header {
+    background: var(--header-bg);
+    color: var(--header-text);
+}
+
+label {
+    color: var(--label-color);
+}
+
+input,
+select {
+    background-color: var(--input-bg);
+    border-color: var(--input-border);
+}
+
+input:focus,
+select:focus {
+    border-color: var(--input-focus);
+    box-shadow: 0 0 0 3px rgba(139, 90, 60, 0.2);
+}
+
+button {
+    background-color: var(--button-bg);
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+.resultado,
+.resultado-detalhado {
+    background: var(--result-bg);
+    border-left-color: var(--result-border);
+}
+
+.transport-card {
+    background: var(--card-bg);
+    border-color: var(--card-border);
+}
+
+.transport-card.active {
+    background: var(--card-active-bg);
+    color: var(--card-active-text);
+}
+
+.comparacao-card {
+    background: var(--comparison-card-bg);
+}
+
+footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+}
+
+/* Tema escuro */
+.dark-theme {
+    --bg-gradient-start: #2c2c2c;
+    --bg-gradient-end: #1a1a1a;
+    --container-bg: #2a2a2a;
+    --header-bg: #3e2a1f;
+    --header-text: #f0e6d2;
+    --label-color: #d9c5b0;
+    --input-bg: #3a3a3a;
+    --input-border: #5a4a3a;
+    --input-focus: #b87c4a;
+    --button-bg: #b87c4a;
+    --button-hover: #9a6234;
+    --result-bg: #3a2e26;
+    --result-border: #b87c4a;
+    --card-bg: #3a3a3a;
+    --card-border: #5a4a3a;
+    --card-active-bg: #b87c4a;
+    --card-active-text: #1e1e1e;
+    --comparison-card-bg: #3a3a3a;
+    --footer-bg: #2a2a2a;
+    --footer-text: #c0b8a8;
+    --text-color: #f0f0f0;
+}
+
+/* Botão de alternância de tema - estilo quadrado com bordas arredondadas */
+.theme-toggle-btn {
+    background-color: #b87c4a;
+    /* marrom médio (fundo padrão) */
+    border: none;
+    border-radius: 10px;
+    /* bordas levemente arredondadas */
+    width: 48px;
+    height: 48px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.1s;
+    color: white;
+    /* ícone branco para contraste */
+}
+
+.theme-toggle-btn:hover {
+    background-color: #d6a06c;
+    /* marrom mais claro ao passar o mouse */
+    transform: scale(1.02);
+}
+
+.theme-toggle-btn:active {
+    transform: scale(0.98);
+}
+
+/* Tema escuro: o botão terá cores mais escuras, mas você já tem a classe .dark-theme, então pode personalizar se desejar */
+.dark-theme .theme-toggle-btn {
+    background-color: #5e3a2b;
+    /* marrom escuro */
+    color: #fef3e2;
+}
+
+.dark-theme .theme-toggle-btn:hover {
+    background-color: #7a4f38;
+    /* um pouco mais claro no hover */
 }

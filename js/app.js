@@ -23,4 +23,24 @@ document.addEventListener('DOMContentLoaded', () => {
             calcularEAtualizarUI(distancia);
         }
     }
+
+    // Alternância de tema claro/escuro
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+    // Carregar tema salvo no localStorage
+    const savedTheme = localStorage.getItem('ecotrip-theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        themeToggle.textContent = '☀️'; // sol para tema claro
+    } else {
+        themeToggle.textContent = '🌙'; // lua para tema escuro
+    }
+
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        const isDark = document.body.classList.contains('dark-theme');
+        localStorage.setItem('ecotrip-theme', isDark ? 'dark' : 'light');
+        themeToggle.textContent = isDark ? '☀️' : '🌙';
+    });
+}
 });
