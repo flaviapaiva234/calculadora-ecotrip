@@ -149,3 +149,108 @@ footer {
         font-size: 1.6rem;
     }
 }
+
+/* Cards de transporte */
+.transport-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.transport-card {
+    background: #fef7f0;
+    border: 2px solid #e6d5c4;
+    border-radius: 20px;
+    padding: 12px 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.transport-card.active {
+    background: #8b5a3c;
+    border-color: #5e3a2b;
+    color: white;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.transport-card.active .card-fator {
+    color: #fef3e2;
+}
+
+.card-icon {
+    font-size: 2rem;
+}
+
+.card-nome {
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin: 6px 0;
+}
+
+.card-fator {
+    font-size: 0.7rem;
+    color: #8b5a3c;
+}
+
+/* Resultado detalhado */
+.resultado-detalhado {
+    background: #f5ede4;
+    border-radius: 24px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.resultado-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+#emissao {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #8b5a3c;
+    margin: 10px 0;
+}
+
+.comparacao-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.comparacao-card {
+    background: white;
+    border-radius: 16px;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #e6d5c4;
+    transition: 0.2s;
+}
+
+.comparacao-card.destaque {
+    background: #e7d9cd;
+    border-left: 5px solid #8b5a3c;
+    font-weight: bold;
+}
+
+.comparacao-icon {
+    font-size: 1.6rem;
+}
+
+.comparacao-nome {
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 6px 0;
+}
+
+.comparacao-valor {
+    font-size: 1rem;
+    color: #8b5a3c;
+}

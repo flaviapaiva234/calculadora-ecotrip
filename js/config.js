@@ -1,16 +1,14 @@
-// Fatores de emissão de CO₂ por meio de transporte (kg CO₂ por km)
-const fatoresEmissao = {
-    carro: 0.192,        // Carro a gasolina (médio)
-    carro_etanol: 0.062, // Carro a etanol
-    onibus: 0.041,       // Ônibus urbano/interestadual
-    aviao: 0.185,        // Avião (doméstico, médio)
-    trem: 0.031,         // Trem/metrô
-    metro: 0.031,        // Metrô (mesmo fator)
-    bicicleta: 0.0,      // Zero emissão direta
-    caminhada: 0.0       // Zero emissão direta
-};
-
-// Exporta para uso global (caso necessário, mas estará disponível no escopo global)
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = fatoresEmissao;
-}
+// Lista de transportes com fatores de emissão (kg CO₂/km) e ícones
+const transportes = [
+    { id: "carro", nome: "Carro (gasolina)", icone: "🚗", fator: 0.192, descricao: "Médio porte" },
+    { id: "carro_etanol", nome: "Carro (etanol)", icone: "🚗💨", fator: 0.062, descricao: "Renovável" },
+    { id: "moto", nome: "Motocicleta", icone: "🏍️", fator: 0.080, descricao: "Média" },
+    { id: "onibus", nome: "Ônibus", icone: "🚌", fator: 0.041, descricao: "Urbano/Interestadual" },
+    { id: "aviao", nome: "Avião", icone: "✈️", fator: 0.185, descricao: "Doméstico" },
+    { id: "trem", nome: "Trem", icone: "🚆", fator: 0.031, descricao: "Baixa emissão" },
+    { id: "metro", nome: "Metrô", icone: "🚇", fator: 0.031, descricao: "Baixa emissão" },
+    { id: "navio", nome: "Navio/Balsa", icone: "⛴️", fator: 0.120, descricao: "Emissão moderada" },
+    { id: "caminhao", nome: "Caminhão", icone: "🚛", fator: 0.250, descricao: "Alta emissão" },
+    { id: "bicicleta", nome: "Bicicleta", icone: "🚲", fator: 0.0, descricao: "Zero emissão" },
+    { id: "caminhada", nome: "Caminhada", icone: "🚶", fator: 0.0, descricao: "Zero emissão" }
+];
