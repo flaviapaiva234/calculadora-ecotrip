@@ -1,0 +1,1 @@
+console.log("routes-data.js carregado (expansão futura)");
