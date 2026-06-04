@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>EcoTrip - Calculadora de Carbono</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts (opcional, para um visual mais moderno) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🌱 EcoTrip</h1>
+            <p>Simule o impacto ambiental da sua viagem</p>
+        </header>
+
+        <main>
+            <form id="carbon-form">
+                <!-- Origem e Destino ou distância manual -->
+                <div class="form-group">
+                    <label for="origem">Origem (opcional):</label>
+                    <input type="text" id="origem" name="origem" placeholder="Ex: São Paulo, SP">
+                </div>
+
+                <div class="form-group">
+                    <label for="destino">Destino (opcional):</label>
+                    <input type="text" id="destino" name="destino" placeholder="Ex: Rio de Janeiro, RJ">
+                </div>
+
+                <div class="form-group">
+                    <label for="distancia">Distância (km):</label>
+                    <input type="number" id="distancia" name="distancia" step="0.1" placeholder="Ou insira a distância em km" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="transporte">Meio de transporte:</label>
+                    <select id="transporte" name="transporte">
+                        <option value="carro">🚗 Carro (gasolina)</option>
+                        <option value="carro_etanol">🚗 Carro (etanol)</option>
+                        <option value="onibus">🚌 Ônibus</option>
+                        <option value="aviao">✈️ Avião</option>
+                        <option value="trem">🚆 Trem</option>
+                        <option value="metro">🚇 Metrô</option>
+                        <option value="bicicleta">🚲 Bicicleta</option>
+                        <option value="caminhada">🚶 Caminhada</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="calcular-btn">Calcular emissão de CO₂</button>
+            </form>
+
+            <div id="resultado" class="resultado">
+                <h3>Resultado da viagem</h3>
+                <p id="emissao">-- kg CO₂</p>
+                <p id="dica"></p>
+            </div>
+        </main>
+
+        <footer>
+            <p>💡 Dica: Quanto menor a emissão, melhor para o planeta!</p>
+        </footer>
+    </div>
+
+    <!-- Scripts na ordem correta -->
+    <script src="js/config.js"></script>
+    <script src="js/routes-data.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
